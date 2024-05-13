@@ -34,11 +34,11 @@ while True:
             translation = translator.translate(text, dest='es')
             print(f"Translated to Spanish: {translation.text}")
             # speak the translated text
-            tts.say(translation.txt)
-            tts.runAndWait
+            tts.say(translation.text)
+            tts.runAndWait()
         else:
             print("Language not supported") 
     except sr.UnknownValueError:
-            print("Google Speech Recognition could not understand audio")
+        print("Google Speech Recognition could not understand audio")
     except sr.RequestError as e:
-            print(f"Could not request results from Google Speech Recognition service; {e}")
+        print(f"Could not request results from Google Speech Recognition service; {e}")
